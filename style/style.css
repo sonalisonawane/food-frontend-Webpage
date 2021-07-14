@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;900&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --red: rgb(242 18 18 / 90%);
+}
+
+.img img {
+    width: 279px;
+    height: 250px;
+}
+
+body {
+    background-color: #fcfbfb;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    font-family: 'Playfair Display', serif;
+}
+
+main.container {
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+nav.navbar {
+    width: 300px;
+    padding-left: 3.5rem;
+    margin-top: 4.1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+nav.navbar-brand {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .navbar-brand h2 {
+    max-width: auto;
+    font-size: 2.3rem;
+    font-weight: bold;
+    width: 100px;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+}
+
+div.hamburger {
+    display: none;
+}
+
+.hamburger span {
+    display: block;
+    width: 60px;
+    height: 4px;
+    margin: 10px;
+    background: var(--red);
+}
+
+.hamburger span:nth-child(1) {
+    width: 40px;
+}
+
+.hamburger span:nth-child(3) {
+    width: 50px;
+}
+
+ul.navbar-menu {
+    font-family: sans-serif;
+}
+
+li.menu-item {
+    padding: 20px;
+    list-style-type: none;
+    margin: 1.5rem 0;
+    font-size: 17px;
+}
+
+li>a {
+    text-decoration: none;
+    color: grey;
+}
+
+li>a:hover {
+    text-decoration: line-through var(--red) 2px;
+}
+
+button#cart-btn {
+    background: var(--red);
+    color: white;
+    border: none;
+    width: 153px;
+    height: 3.5rem;
+    padding: 1.2rem 3rem;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    margin-bottom: 10px;
+}
+
+section.About {
+    display: grid;
+    margin-top: 155px;
+    margin-left: 80px;
+    gap: 20px;
+}
+
+section.About .title {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+}
+
+h1#heading {
+    font-size: 4.5rem;
+    line-height: 1.6;
+    font-weight: 700;
+    width: 100%;
+}
+
+section.About .info-wrapper {
+    grid-column: 3;
+    grid-row: 1 / span 1;
+    width: 90%;
+    height: 40%;
+}
+
+section.About .info-wrapper p {
+    text-align: left;
+    padding-bottom: 1rem;
+    letter-spacing: 0.1px;
+    line-height: 29px;
+    font-size: 20px;
+    margin-top: 40px;
+    padding-left: 2.5rem;
+    font-family: sans-serif;
+    text-shadow: 0px 1px 2px slategrey;
+    width: 75%;
+    color: slategrey;
+}
+
+hr {
+    width: 88px;
+    background-color: var(--red);
+    height: 3px;
+    border: none;
+    margin-left: 2.5rem;
+}
+
+section.About .card-wrapper {
+    grid-column: 1 / span 3;
+    grid-row: 2;
+    display: flex;
+}
+
+section.About .card-wrapper .card {
+    background: #fff;
+    width: 200px;
+    height: 265px;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 25px;
+    box-shadow: 8px 27px 39px lightgrey;
+    overflow: hidden;
+}
+
+.card-wrapper .card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.card span {
+    font-family: sans-serif;
+    font-weight: 900;
+    opacity: 0.9;
+}
+
+.cart-icon {
+    display: none;
+}
+
+
+/* navbar styling */
+
+@media screen and (max-width: 500px) {
+    main.container {
+        display: flex;
+        max-width: 90%;
+        flex-direction: column;
+        margin: 0 auto;
+        /* justify-content: space-between; */
+    }
+    nav.navbar {
+        margin-top: 1.5rem;
+        width: 100%;
+        padding-left: 0;
+    }
+    .navbar-brand {
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    nav .navbar-brand h2 {
+        max-width: 100%;
+        font-size: 1.5rem;
+        font-weight: bold;
+        width: 100px;
+        height: 40px;
+        margin-bottom: 30px;
+        text-transform: capitalize;
+        overflow: hidden;
+    }
+    div.hamburger {
+        display: inline-block;
+    }
+    .hamburger span {
+        display: block;
+        width: 36px;
+        height: 3px;
+        margin: 7px;
+        background: var(--red);
+    }
+    .hamburger span:nth-child(1) {
+        width: 24px;
+    }
+    .hamburger span:nth-child(3) {
+        width: 31px;
+    }
+    ul.navbar-menu {
+        font-family: sans-serif;
+        display: none;
+        margin: 0 auto;
+    }
+    button#cart-btn {
+        display: none;
+    }
+    .cart-icon {
+        display: inline-block;
+    }
+    .fas {
+        color: var(--red);
+        transform: scale(-1, 1);
+        color: var(--red);
+        transform: scale(-1, 1);
+        display: inline-block;
+        font-size: 1.6rem;
+    }
+    li.menu-item {
+        padding: 20px;
+        list-style-type: none;
+        margin: 1.5rem 0;
+        font-size: 17px;
+    }
+    li>a {
+        text-decoration: none;
+        color: grey;
+    }
+    li>a:hover {
+        text-decoration: line-through var(--red) 2px;
+    }
+    .navbar-menu.display {
+        display: block;
+    }
+    section.About {
+        display: grid;
+        margin-top: 100px;
+        margin: auto;
+        gap: 20px;
+        width: 100%;
+    }
+    section.About .title {
+        grid-column: 1;
+        grid-row: 1;
+        margin-top: 1.8rem;
+    }
+    h1#heading {
+        font-size: 1.7rem;
+        line-height: 1.6;
+        font-weight: 700;
+        width: 90%;
+    }
+    section.About .info-wrapper {
+        grid-column: 1;
+        grid-row: 3 /span 3;
+        width: 100%;
+        padding: 2px;
+        margin-bottom: 1rem;
+        height: 40%;
+    }
+    section.About .info-wrapper p {
+        padding-left: 10px;
+        text-align: left;
+        /* padding-bottom: 1rem; */
+        line-height: 22px;
+        font-size: 15px;
+        margin-top: 11px;
+        width: 100%;
+        word-spacing: 1px;
+    }
+    hr {
+        width: 77px;
+        height: 2.5px;
+        margin-left: 10px;
+    }
+    section.About .card-wrapper {
+        grid-column: 1/ span 1;
+        grid-row: 2;
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 0px;
+    }
+    section.About .card-wrapper .card {
+        background: #fff;
+        width: 44%;
+        height: 160px;
+        margin: 0.5rem;
+        border-radius: 17px;
+    }
+    div.noodles {
+        display: none;
+    }
+    .card-wrapper .card img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 1rem;
+    }
+    .card span {
+        font-family: sans-serif;
+        font-weight: 700;
+        font-size: 0.8rem;
+    }
+}
